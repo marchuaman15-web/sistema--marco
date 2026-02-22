@@ -37,9 +37,19 @@ try:
             conn.update(worksheet="OTs", data=df_final)
             st.success(f"✅ OT {n_ot} guardada con éxito")
             st.balloons()
+            try:
+    # Estas líneas de abajo tienen que tener 4 espacios de sangría
+    url = st.secrets["Misterios"]["link"]
+    df_equipos = pd.read_excel(url, sheet_name="EQUIPOS")
+    df_ots = pd.read_excel(url, sheet_name="OTs")
+
+except Exception as e:
+    # La palabra 'except' tiene que estar alineada justo debajo de 'try'
+    st.error(f"Error técnico detectado: {e}")
 
   except Exception as e:
     st.error(f"Error técnico detectado: {e}")
+
 
 
 
