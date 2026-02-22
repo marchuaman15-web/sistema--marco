@@ -12,7 +12,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 try:
     # Lee la pestaña EQUIPOS
-    df_equipos = conn.read(worksheet="EQUIPOS")
+    df_equipos = conn.read(worksheet=EQUIPOS)
     
     with st.form("form_ot"):
         col1, col2 = st.columns(2)
@@ -40,3 +40,4 @@ try:
 
 except Exception as e:
     st.error("Error: Verifica que el link del Excel esté en 'Misterios' y las pestañas se llamen EQUIPOS y OTs."
+
