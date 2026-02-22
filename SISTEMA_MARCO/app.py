@@ -12,7 +12,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 try:
     # Lee la pestaña EQUIPOS
-    df_equipos = conn.read(worksheet="EQUIPOS")
+    df_equipos = pd.read_excel (url,shet_name="EQUIPOS")
     
     with st.form("form_ot"):
         col1, col2 = st.columns(2)
@@ -38,8 +38,9 @@ try:
             st.success(f"✅ OT {n_ot} guardada con éxito")
             st.balloons()
 
-except Exception as e:
-    st.error(f"Error: Error tecnico detectado:{e} ")
+  except Exception as e:
+    st.error(f"Error técnico detectado: {e}")
+
 
 
 
