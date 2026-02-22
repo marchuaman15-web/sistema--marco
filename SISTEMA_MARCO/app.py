@@ -39,7 +39,8 @@ try:
             st.balloons()
 
 except Exception as e:
-    st.error("Error: Verifica que el link del Excel esté en 'Misterios' y las pestañas se llamen EQUIPOS y OTs.")
+    st.error(f"Error: Error tecnico detectado:{e} ")
+
 
 
 
