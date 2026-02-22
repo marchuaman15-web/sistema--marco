@@ -42,3 +42,6 @@ except Exception as e:
     st.error("Error: Verifica que el link del Excel esté en 'Misterios' y las pestañas se llamen EQUIPOS y OTs.")
 
 
+# Busca tu bloque de error (aprox. línea 40-42)
+except Exception as e:
+    st.error(f"Error técnico detectado: {e}")
