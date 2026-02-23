@@ -37,12 +37,13 @@ try:
             conn.update(worksheet="OTs", data=df_final)
             st.success(f"✅ OT {n_ot} guardada con éxito")
             st.balloons()
-        try:
-    url = st.secrets["Misterios"]["link"]
-    df_equipos = pd.read_excel(url, sheet_name="EQUIPOS")
-    df_ots = pd.read_excel(url, sheet_name="OTs")
-except Exception as e:
-    st.error(f"Error técnico detectado: {e}")
+    
+
+    try:
+    url = st.secrets["Misterios"]["link"]  # ✅ Con indentación (4 espacios)
+except:
+    st.error("No se encontró el secreto")
+
 
 
 
