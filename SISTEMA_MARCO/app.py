@@ -38,9 +38,10 @@ try:
             st.success(f"✅ OT {n_ot} guardada con éxito")
             st.balloons()
     try:
-        url = st.secrets["Misterios"]["link"]
+            url = st.secrets["Misterios"]["link"]
 except:
-        st.error("No se encontró el secreto")
+                st.error("No se encontró el secreto")
+
 
 
 
