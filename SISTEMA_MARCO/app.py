@@ -37,12 +37,11 @@ try:
             conn.update(worksheet="OTs", data=df_final)
             st.success(f"✅ OT {n_ot} guardada con éxito")
             st.balloons()
-    
-
     try:
-    url = st.secrets["Misterios"]["link"]  # ✅ Con indentación (4 espacios)
+    url = st.secrets["Misterios"]["link"]
 except:
     st.error("No se encontró el secreto")
+
 
 
 
